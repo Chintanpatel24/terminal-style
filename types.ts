@@ -1,26 +1,26 @@
 
-export interface Token {
+import React from 'react';
+
+export interface Project {
   id: string;
-  symbol: string;
   name: string;
-  price: number;
-  balance: number;
-  change24h: number;
-  color: string;
+  description: string;
+  tech: string[];
+  link?: string;
 }
 
-export interface Transaction {
-  id: string;
-  type: 'BUY' | 'SELL';
-  token: string;
-  amount: number;
-  price: number;
-  timestamp: number;
+export interface Skill {
+  category: string;
+  items: string[];
 }
 
-export interface TerminalMessage {
-  id: string;
-  content: string;
-  type: 'SYSTEM' | 'USER' | 'AI' | 'ERROR';
-  timestamp: number;
+export interface TerminalLine {
+  text: React.ReactNode;
+  type: 'input' | 'output' | 'error' | 'success' | 'info';
+  timestamp: string;
+}
+
+export interface CommandResponse {
+  output: React.ReactNode;
+  type: 'output' | 'error' | 'success' | 'info';
 }

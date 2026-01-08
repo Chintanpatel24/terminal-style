@@ -1,12 +1,62 @@
 
 import React from 'react';
-import { Token } from './types';
+import { Project, Skill } from './types';
 
-export const INITIAL_TOKENS: Token[] = [
-  { id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin', price: 68420.50, balance: 0.45, change24h: 2.4, color: '#f7931a' },
-  { id: 'ethereum', symbol: 'ETH', name: 'Ethereum', price: 3540.12, balance: 12.5, change24h: -1.2, color: '#627eea' },
-  { id: 'solana', symbol: 'SOL', name: 'Solana', price: 145.88, balance: 450.0, change24h: 8.7, color: '#14f195' },
-  { id: 'cardano', symbol: 'ADA', name: 'Cardano', price: 0.45, balance: 15000.0, change24h: 0.5, color: '#0033ad' },
+export const PROJECTS: Project[] = [
+  {
+    id: 'P01',
+    name: 'NeuralMesh Engine',
+    description: 'A distributed processing framework for real-time sensor data analysis.',
+    tech: ['Rust', 'WebAssembly', 'React'],
+    link: '#'
+  },
+  {
+    id: 'P02',
+    name: 'GhostProtocol SDK',
+    description: 'An end-to-end encrypted messaging bridge for legacy enterprise systems.',
+    tech: ['TypeScript', 'Node.js', 'Cryptography'],
+    link: '#'
+  },
+  {
+    id: 'P03',
+    name: 'Cortex UI',
+    description: 'A design system built for high-density information displays.',
+    tech: ['Tailwind', 'React', 'Framer Motion'],
+    link: '#'
+  }
 ];
 
-export const PCB_SVG_PATH = "M10 10 H 90 V 90 H 10 Z"; // Placeholder
+export const SKILLS: Skill[] = [
+  {
+    category: 'Core Logic',
+    items: ['TypeScript', 'Rust', 'Python', 'C++']
+  },
+  {
+    category: 'Interface',
+    items: ['React', 'Tailwind CSS', 'Canvas API', 'Three.js']
+  },
+  {
+    category: 'Systems',
+    items: ['Docker', 'AWS', 'PostgreSQL', 'Redis']
+  }
+];
+
+export const SYSTEM_INFO = {
+  user: 'guest',
+  host: 'circuit-terminal-v2.0',
+  os: 'PCB-Kernel v4.8.2-stable',
+  status: 'ONLINE',
+  uptime: '1024:12:05'
+};
+
+export const HELP_TEXT = `
+AVAILABLE COMMANDS:
+  about       - Display biography
+  projects    - List recent developments
+  skills      - Show technical capabilities
+  clear       - Wipe terminal screen
+  help        - Show this menu
+  contact     - View communication channels
+  system      - System hardware diagnostics
+  shutdown    - Terminate current session
+`;
