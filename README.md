@@ -8,3 +8,5 @@
                                                   |___/             
 </pre>
 </div>
+
+Live Deom : [Tap to view](https://terminal-style.vercel.app)
